@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Tic Tac Toe</string>
+    <string name="start">ٍSingle Player</string>
+    <string name="startMultiPlayers">2 Players</string>
+    <string name="about">About</string>
+    <string name="name">Developed by Ahmed Magdy</string>
+    <string name="visit">Visit My Youtube Channel</string>
+    <string name="player1">Player 1</string>
+    <string name="player2">Player 2</string>
+    <string name="vsCom">Vs Computer will be available soon</string>
+    <string name="title">Tic Tac Toe</string>
+    <string name="start_game">Start</string>
+    <string name="playing">Playing</string>
+    <string name="again">Do you want to play again ?</string>
+    <string name="over">Game Over</string>
+    <string name="quit">Do you want really to quit ?</string>
+</resources>

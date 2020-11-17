@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/mainBack"
+    tools:context=".TwoPlayersActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/btnColor"
+        android:id="@+id/titleBar">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/start_game"
+            android:id="@+id/btnStart"
+            android:layout_toEndOf="@id/playerTurn"
+            android:background="@color/mainBack"
+            android:textColor="@color/foreColor"
+            android:onClick="startGame"
+            android:layout_margin="10dp">
+        </Button>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/player1"
+            android:textSize="20sp"
+            android:id="@+id/playerTurn"
+            android:layout_margin="20dp"
+            android:textStyle="bold"
+            android:textColor="@color/foreColor">
+        </TextView>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="30dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/titleBar">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="150dp"
+            android:textColor="@color/foreColor"
+            android:background="@color/btnColor"
+            android:id="@+id/btn0"
+            android:textSize="30sp"
+            android:onClick="btnClicked"
+            android:text="\-">
+        </Button>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="150dp"
+            android:textColor="@color/foreColor"
+            android:background="@color/btnColor"
+            android:id="@+id/btn1"
+            android:textSize="30sp"
+            android:onClick="btnClicked"
+            android:layout_toEndOf="@+id/btn0"
+            android:layout_marginStart="10dp"
+            android:text="\-" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="150dp"
+            android:textColor="@color/foreColor"
+            android:background="@color/btnColor"
+            android:textSize="30sp"
+            android:id="@+id/btn2"
+            android:onClick="btnClicked"
+            android:layout_toEndOf="@+id/btn1"
+            android:layout_marginStart="10dp"
+            android:text="\-">
+        </Button>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="150sp"
+            android:id="@+id/btnSpecial"
+            android:layout_marginTop="10sp"
+            android:background="@color/btnColor"
+            android:textColor="@color/foreColor"
+            android:text="\-"
+            android:onClick="btnClicked"
+            android:textSize="30sp"
+            android:layout_below="@+id/btn0">
+
+        </Button>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="150dp"
+            android:textColor="@color/foreColor"
+            android:background="@color/btnColor"
+            android:textSize="30sp"
+            android:id="@+id/btn5"
+            android:onClick="btnClicked"
+            android:layout_below="@+id/btn1"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_toEndOf="@+id/btnSpecial"
+            android:text="\-">
+        </Button>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="150dp"
+            android:textColor="@color/foreColor"
+            android:background="@color/btnColor"
+            android:textSize="30sp"
+            android:onClick="btnClicked"
+            android:id="@+id/btn6"
+            android:layout_below="@+id/btn1"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@+id/btn5"
+            android:text="\-">
+        </Button>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="150dp"
+            android:textColor="@color/foreColor"
+            android:background="@color/btnColor"
+            android:textSize="30sp"
+            android:id="@+id/btn7"
+            android:onClick="btnClicked"
+            android:layout_below="@+id/btnSpecial"
+            android:layout_marginTop="10dp"
+            android:text="\-">
+        </Button>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="150dp"
+            android:textColor="@color/foreColor"
+            android:background="@color/btnColor"
+            android:textSize="30sp"
+            android:id="@+id/btn8"
+            android:onClick="btnClicked"
+            android:layout_below="@+id/btn5"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_toEndOf="@+id/btn7"
+            android:text="\-">
+        </Button>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="150dp"
+            android:textColor="@color/foreColor"
+            android:background="@color/btnColor"
+            android:textSize="30sp"
+            android:onClick="btnClicked"
+            android:id="@+id/btn9"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/btn6"
+            android:layout_toEndOf="@+id/btn8"
+            android:text="\-" />
+
+    </RelativeLayout>
+
+</RelativeLayout>
