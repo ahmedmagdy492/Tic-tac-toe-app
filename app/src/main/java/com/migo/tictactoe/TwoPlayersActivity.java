@@ -8,6 +8,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -102,6 +103,10 @@ public class TwoPlayersActivity extends AppCompatActivity {
         boolean pattern8 = btn0.getText().equals(s) && btn5.getText().equals(s) && btn9.getText().equals(s);
         boolean pattern9 = btn2.getText().equals(s) && btn5.getText().equals(s) && btn7.getText().equals(s);
 
+        boolean isGameOver = !btn0.getText().equals("-") && !btn1.getText().equals("-") && !btn2.getText().equals("-")
+                            && !btn4.getText().equals("-") && !btn5.getText().equals("-") && !btn6.getText().equals("-")
+                            && !btn7.getText().equals("-") && !btn8.getText().equals("-") && !btn9.getText().equals("-");
+
         if(pattern1 || pattern2 || pattern3 || pattern5 || pattern6 || pattern7 || pattern8 || pattern9)
         {
             txtTurn.setText(s + " Won");
@@ -111,7 +116,7 @@ public class TwoPlayersActivity extends AppCompatActivity {
             btnStart.setEnabled(true);
             showDialog();
         }
-        else if(!isPlaying)
+        else if(isGameOver)
         {
             // draw
             txtTurn.setText("Draw");
@@ -127,8 +132,16 @@ public class TwoPlayersActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_two_players);
+        // keep the screen awake while playing
+        getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
 
         initWidgets();
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        getWindow().clearFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
     }
 
     @Override
@@ -137,7 +150,7 @@ public class TwoPlayersActivity extends AppCompatActivity {
         {
             AlertDialog.Builder builder = new AlertDialog.Builder(this);
             builder.setMessage(getString(R.string.quit));
-            builder.setTitle("Warnning");
+            builder.setTitle("Warning");
             builder.setIcon(R.drawable.ic_action_name);
 
             builder.setNegativeButton("no", new DialogInterface.OnClickListener() {

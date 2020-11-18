@@ -19,9 +19,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/name"
+        android:id="@+id/btnVisit"
         android:layout_centerHorizontal="true"
         android:textColor="@color/foreColor"
         android:text="@string/visit"
+        android:onClick="btnClicked"
         android:layout_margin="30dp"
         android:background="@color/btnColor">
     </Button>
